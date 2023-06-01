@@ -1,0 +1,81 @@
+*
+{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body 
+{
+    background-color: #121420;
+}
+
+img
+{
+    width: 200px;
+}
+
+.content
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.blur-svg {
+    position: absolute;
+    z-index: -1;
+    border-image: 20px solid red;
+    filter: blur(25px) ;
+
+    animation: ondulated 3s ease-in infinite;
+}
+
+
+@keyframes ondulated {
+    0% {
+        transform: skew(0);
+    }
+    20% {
+        transform: skewX(10deg);
+    }
+    50% {
+        transform: skewY(15deg);
+        opacity: 70%;
+    }
+    100% {
+        transform: skew(0deg);
+    }
+}
+
+.container 
+{
+    max-width: 997px;
+    height: auto;
+
+    margin: 0 auto;
+
+    border: 1px solid hwb(0 100% 0%);
+    padding: 24px;
+}
+
+.poke-cards
+{
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+
+}
+.poke-cards img
+{
+    position: absolute;
+    border: 1px solid red;
+    opacity: 0; 
+    transition: 0.4s ease;
+}
+
+.poke-cards img.active
+{
+    opacity: 1;
+}
