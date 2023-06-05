@@ -58,6 +58,10 @@ img
 
     border: 1px solid hwb(0 100% 0%);
     padding: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .poke-cards
@@ -78,4 +82,11 @@ img
 .poke-cards img.active
 {
     opacity: 1;
+}
+
+img
+{
+    border: 1px solid red;
+
+    width: 90%;
 }
